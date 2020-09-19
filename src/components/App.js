@@ -9,7 +9,7 @@ import user from "../user.json";
 const App = () => {
     return (
         <div>
-            <Profile/>
+            <Profile user={user}/>
             <Panel title="Последние новости">
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam,
