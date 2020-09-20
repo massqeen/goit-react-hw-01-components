@@ -4,8 +4,9 @@ import PaintingList from './PaintingList';
 import Panel from './Panel';
 import paintings from '../paintings.json';
 import Profile from './Profile/Profile';
+import Statistics from './Statistics/StatisticsList';
 
-const App = ({ user }) => {
+const App = ({ user, statistics }) => {
   return (
     <div>
       <Profile
@@ -15,6 +16,7 @@ const App = ({ user }) => {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload stats" statistics={statistics} />
       <Panel title="Последние новости">
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam,
