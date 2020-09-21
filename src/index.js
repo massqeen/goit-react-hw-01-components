@@ -5,10 +5,11 @@ import App from './components/App';
 import user from './db/user.json';
 import statistics from './db/statistical-data.json';
 import friends from './db/friends.json';
+import transactions from './db/transactions.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App user={user} statistics={statistics} friends={friends} />
+    <App user={user} statistics={statistics} friends={friends} transactions={transactions} />
   </React.StrictMode>,
   document.getElementById('root')
 );
