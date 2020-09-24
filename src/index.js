@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './base.css';
-import App from './components/App';
+import App from './App';
 import user from './db/user.json';
 import statistics from './db/statistical-data.json';
 import friends from './db/friends.json';

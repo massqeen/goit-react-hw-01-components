@@ -1,8 +1,8 @@
 import React from 'react';
-import Profile from './Profile/Profile';
-import Statistics from './StatisticsList/StatisticsList';
-import Friends from './FriendList/FriendList';
-import Transactions from './TransactionHistory/TransactionHistory';
+import Profile from './components/Profile/Profile';
+import Statistics from './components/StatisticsList/StatisticsList';
+import Friends from './components/FriendList/FriendList';
+import Transactions from './components/TransactionHistory/TransactionHistory';
 
 const App = ({user, statistics, friends, transactions}) => {
     return (
