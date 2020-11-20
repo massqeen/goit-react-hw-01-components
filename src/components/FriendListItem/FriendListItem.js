@@ -11,6 +11,7 @@ const FriendListItem = ({ avatar, name, isOnline, id }) => {
     borderRadius: '8px',
     marginRight: '20px',
     backgroundImage: `url(${avatar}), url(${preloaderImage})`,
+    backgroundSize: 'contain',
   };
   const statusClass = isOnline ? styles.online : styles.offline;
 

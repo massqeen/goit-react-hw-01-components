@@ -13,6 +13,7 @@ const imageStyle = {
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
   imageStyle.backgroundImage = `url(${avatar}), url(${preloaderImage})`;
+  const { followers, likes, views } = stats;
   return (
     <div className={styles.profile}>
       <div className={styles.profileWrapper}>
@@ -22,11 +23,7 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
           <p className={styles.tag}>@{tag}</p>
           <p className={styles.location}>{location}</p>
         </div>
-        <Stats
-          followers={stats.followers}
-          likes={stats.likes}
-          views={stats.views}
-        />
+        <Stats followers={followers} likes={likes} views={views} />
       </div>
     </div>
   );
