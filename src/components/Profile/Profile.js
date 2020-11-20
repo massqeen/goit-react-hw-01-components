@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
-import Stats from '../Stats/Stats';
+import ProfileStats from '../ProfileStats/ProfileStats';
 const preloaderImage =
   'https://dummyimage.com/128x128/0015ff/fff.jpg&text=no+avatar';
 const imageStyle = {
@@ -10,20 +10,27 @@ const imageStyle = {
   borderRadius: '50%',
   marginBottom: '10px',
 };
+const {
+  profile,
+  profileWrapper,
+  description,
+  name: names,
+  tag: tags,
+  location: locations,
+} = styles;
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
   imageStyle.backgroundImage = `url(${avatar}), url(${preloaderImage})`;
-  const { followers, likes, views } = stats;
   return (
-    <div className={styles.profile}>
-      <div className={styles.profileWrapper}>
-        <div className={styles.description}>
+    <div className={profile}>
+      <div className={profileWrapper}>
+        <div className={description}>
           <div className="avatar" style={imageStyle} />
-          <p className={styles.name}>{name}</p>
-          <p className={styles.tag}>@{tag}</p>
-          <p className={styles.location}>{location}</p>
+          <p className={names}>{name}</p>
+          <p className={tags}>@{tag}</p>
+          <p className={locations}>{location}</p>
         </div>
-        <Stats followers={followers} likes={likes} views={views} />
+        <ProfileStats stats={stats} />
       </div>
     </div>
   );
