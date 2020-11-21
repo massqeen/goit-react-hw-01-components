@@ -1,11 +1,11 @@
-import PropTypes, { object } from 'prop-types';
 import React from 'react';
-import Profile from './components/Profile/Profile';
-import Statistics from './components/StatisticsList/StatisticsList';
-import Friends from './components/FriendList/FriendList';
-import Transactions from './components/TransactionHistory/TransactionHistory';
+import PropTypes, { object } from 'prop-types';
+import Profile from './js/components/Profile';
+import Statistics from './js/components/StatisticsList';
+import Friends from './js/components/FriendList';
+import Transactions from './js/components/TransactionHistory';
 
-const App = ({ user, statistics, friends, transactions }) => {
+const App = ({ user, statistics, friends, transactions, noAvatar }) => {
   const { name, tag, location, avatar, stats } = user;
   return (
     <div>
@@ -15,9 +15,10 @@ const App = ({ user, statistics, friends, transactions }) => {
         location={location}
         avatar={avatar}
         stats={stats}
+        noAvatar={noAvatar}
       />
       <Statistics title="Upload stats" statistics={statistics} />
-      <Friends friends={friends} />
+      <Friends friends={friends} noAvatar={noAvatar} />
       <Transactions transactions={transactions} />
     </div>
   );
@@ -30,4 +31,5 @@ App.propTypes = {
   statistics: PropTypes.arrayOf(object).isRequired,
   transactions: PropTypes.arrayOf(object).isRequired,
   user: PropTypes.object.isRequired,
+  noAvatar: PropTypes.string.isRequired,
 };
