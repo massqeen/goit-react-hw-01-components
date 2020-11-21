@@ -8,7 +8,6 @@ const Statistics = ({ statistics, title }) => (
   <section className={section}>
     <div className={wrapper}>
       {title && <h2 className={header}>{title}</h2>}
-      {console.log(title)}
       <ul className={list}>
         {statistics.map(({ label, percentage, id }) => (
           <StatisticItem label={label} percentage={percentage} key={id} />
@@ -18,6 +17,9 @@ const Statistics = ({ statistics, title }) => (
   </section>
 );
 
-Statistics.propTypes = { statistics: PropTypes.array.isRequired };
+Statistics.propTypes = {
+  statistics: PropTypes.any.isRequired,
+  title: PropTypes.any.isRequired,
+};
 
 export default Statistics;

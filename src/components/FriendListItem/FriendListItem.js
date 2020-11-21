@@ -3,23 +3,28 @@ import PropTypes from 'prop-types';
 import styles from './FriendListItem.module.css';
 const preloaderImage =
   'https://dummyimage.com/128x128/0015ff/fff.jpg&text=no+avatar';
+const { item, name: names } = styles;
+let imageStyle = {
+  height: '128px',
+  width: '128px',
+  borderRadius: '8px',
+  marginRight: '20px',
+  backgroundSize: 'contain',
+};
 
-const FriendListItem = ({ avatar, name, isOnline, id }) => {
-  const imageStyle = {
-    height: '128px',
-    width: '128px',
-    borderRadius: '8px',
-    marginRight: '20px',
+const FriendListItem = ({ avatar, name, isOnline }) => {
+  imageStyle = {
+    ...imageStyle,
     backgroundImage: `url(${avatar}), url(${preloaderImage})`,
-    backgroundSize: 'contain',
   };
+
   const statusClass = isOnline ? styles.online : styles.offline;
 
   return (
-    <li className={styles.item} key={id}>
-      <span className={statusClass}> </span>
+    <li className={item}>
+      <span className={statusClass} />
       <div className="avatar" style={imageStyle} />
-      <p className={styles.name}>{name}</p>
+      <p className={names}>{name}</p>
     </li>
   );
 };
@@ -30,8 +35,8 @@ FriendListItem.defaultProps = {
 };
 FriendListItem.propTypes = {
   avatar: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
+  isOnline: PropTypes.bool,
+  name: PropTypes.string,
 };
 
 export default FriendListItem;

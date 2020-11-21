@@ -1,3 +1,4 @@
+import PropTypes, { object } from 'prop-types';
 import React from 'react';
 import Profile from './components/Profile/Profile';
 import Statistics from './components/StatisticsList/StatisticsList';
@@ -23,3 +24,10 @@ const App = ({ user, statistics, friends, transactions }) => {
 };
 
 export default App;
+
+App.propTypes = {
+  friends: PropTypes.arrayOf(object).isRequired,
+  statistics: PropTypes.arrayOf(object).isRequired,
+  transactions: PropTypes.arrayOf(object).isRequired,
+  user: PropTypes.object.isRequired,
+};
