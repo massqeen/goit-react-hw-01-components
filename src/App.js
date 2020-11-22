@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes, { object } from 'prop-types';
 import Profile from './js/components/Profile';
 import Statistics from './js/components/StatisticsList';

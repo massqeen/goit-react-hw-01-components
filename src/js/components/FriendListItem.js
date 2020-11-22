@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import setAltAvatar from '../setAltAvatar';
 import styled from 'styled-components';

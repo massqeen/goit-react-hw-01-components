@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import ProfileStatsItem from './ProfileStatsItem';
 import styled from 'styled-components';
