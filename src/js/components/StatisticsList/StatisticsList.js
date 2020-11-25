@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Section, Wrapper, Title, List } from './StatisticsListStyles';
-import StatisticItem from '../StatisticItem/StatisticItem';
+import StatisticItem from './StatisticItem/StatisticItem';
 import hexColorGen from '../../hexColorGen';
 
 const Statistics = ({ statistics, title }) => (

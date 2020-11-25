@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import setAltAvatar from '../../setAltAvatar';
+import setAltAvatar from '../../../setAltAvatar';
 import { ListItem, Status, Img, Name } from './FriendListItemStyles';
 
 const FriendListItem = ({

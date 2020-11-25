@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ProfileStats from '../ProfileStats/ProfileStats';
+import ProfileStats from './ProfileStats/ProfileStats';
 import setAltAvatar from '../../setAltAvatar';
 import {
   StyledProfile,

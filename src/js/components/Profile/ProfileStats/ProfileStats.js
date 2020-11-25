@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ProfileStatsItem from '../ProfileStatsItem/ProfileStatsItem';
+import ProfileStatsItem from './ProfileStatsItem/ProfileStatsItem';
 import List from './ProfileStatsStyles';
 
 const ProfileStats = ({ stats }) => (
