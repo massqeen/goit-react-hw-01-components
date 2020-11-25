@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ListItem = styled.li`
@@ -24,18 +23,4 @@ const Percentage = styled(Span)`
   letter-spacing: 0.45px;
 `;
 
-const StatisticItem = ({ label, percentage, color }) => (
-  <ListItem color={color}>
-    <Label>{label}</Label>
-    <Percentage>{percentage}%</Percentage>
-  </ListItem>
-);
-
-StatisticItem.defaultProps = { label: '', percentage: 0 };
-StatisticItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired,
-};
-
-export default StatisticItem;
+export { ListItem, Label, Percentage };

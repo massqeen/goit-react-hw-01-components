@@ -1,13 +1,6 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import FriendsListItem from './FriendListItem';
-
-const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-`;
+import FriendsListItem from '../FriendListItem/FriendListItem';
+import List from './FriendListStyles';
 
 const FriendList = ({ friends, noAvatar }) => (
   <List>

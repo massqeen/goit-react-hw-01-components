@@ -1,8 +1,8 @@
 import PropTypes, { object } from 'prop-types';
-import Profile from './js/components/Profile';
-import Statistics from './js/components/StatisticsList';
-import Friends from './js/components/FriendList';
-import Transactions from './js/components/TransactionHistory';
+import Profile from './js/components/Profile/Profile';
+import Statistics from './js/components/StatisticsList/StatisticsList';
+import Friends from './js/components/FriendList/FriendList';
+import Transactions from './js/components/TransactionHistory/TransactionHistory';
 
 const App = ({ user, statistics, friends, transactions, noAvatar }) => {
   const { name, tag, location, avatar, stats } = user;

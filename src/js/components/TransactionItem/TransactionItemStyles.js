@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Tr = styled.tr`
@@ -27,23 +26,4 @@ const Currency = styled(Data)`
   text-transform: uppercase;
 `;
 
-const TransactionItem = ({ type, amount, currency }) => (
-  <Tr>
-    <Type>{type}</Type>
-    <Data>{amount}</Data>
-    <Currency>{currency}</Currency>
-  </Tr>
-);
-
-TransactionItem.defaultProps = {
-  type: '',
-  amount: 0,
-  currency: '',
-};
-TransactionItem.propTypes = {
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
-};
-
-export default TransactionItem;
+export { Tr, Data, Type, Currency };

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ListItem = styled.li`
@@ -25,19 +24,4 @@ const Quantity = styled.span`
   line-height: 1.5;
 `;
 
-const ProfileStatsItem = ({ label, quantity }) => (
-  <ListItem>
-    <Label>{label}</Label>
-    <Quantity>{quantity}</Quantity>
-  </ListItem>
-);
-
-ProfileStatsItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  quantity: PropTypes.number,
-};
-ProfileStatsItem.defaultProps = {
-  quantity: 0,
-};
-
-export default ProfileStatsItem;
+export { ListItem, Label, Quantity };
